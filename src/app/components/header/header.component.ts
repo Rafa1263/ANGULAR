@@ -6,17 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
- openMenu() {
-  if (document.getElementById("state")!.innerHTML  != "1") {
-    document.getElementById("menu-animation")!.style.transform = "translatex(0px)"
-    document.getElementById("state")!.innerHTML   = "1";
+  openMenu() {
+    if (document.getElementById("state")!.innerHTML != "1") {
+      document.getElementById("menu-animation")!.style.transform = "translatex(0px)"
+      document.getElementById("state")!.innerHTML = "1";
+    }
   }
-}
-closeMenu() {
-  if (document.getElementById("state")!.innerHTML  == "1") {
-    document.getElementById("menu-animation")!.style.transform = "translatex(3000px)"
-    document.getElementById("state")!.innerHTML   = "0";
+  closeMenu() {
+    if (document.getElementById("state")!.innerHTML == "1") {
+      document.getElementById("menu-animation")!.style.transform = "translatex(3000px)"
+      document.getElementById("state")!.innerHTML = "0";
+    }
   }
-}
 }
 
