@@ -27,24 +27,7 @@ import { LoginViewComponent } from './pages/login-view/login-view.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {
-        path: 'show',
-        component: ShowViewComponent
-      },
-      {
-        path: 'login',
-        component: LoginViewComponent
-      },
-      {
-        path: '', redirectTo: "/login",
-        pathMatch: 'full'
-      },
-      {
-        path: '**',
-        component: NotFoundComponent
-      }
-    ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]

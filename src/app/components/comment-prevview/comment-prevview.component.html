@@ -1,4 +1,4 @@
-<div *ngFor="let post of posts" class="comment">
+<div *ngFor="let post of POSTS" class="comment">
   <div class="user-content">
     <div class="comment-user-img"><img *ngIf="post.photo!='default'" class="default-photo" [src]="post.photo">
       <img *ngIf="post.photo=='default'" class="default-photo"
