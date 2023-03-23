@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./show-view.component.scss']
 })
 export class ShowViewComponent {
+  public readonly POSTS = [
 
+
+  ];
+
+  public log(event: string): void {
+    console.log(event)
+  }
 }

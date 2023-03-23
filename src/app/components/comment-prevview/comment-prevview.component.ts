@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core'
+import { DataService } from 'src/app/services/test/data.service';
 // Poner en input
 
 @Component({
@@ -7,24 +9,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./comment-prevview.component.scss']
 })
 
-export class CommentPrevviewComponent {
-  public readonly POSTS = [
-    {
-      id: 1,
-      name: "test",
-      title: "TEST",
-      content: "dnkwanjkdnajkdw",
-      photo: "default"
-    },
-    {
-      id: 1,
-      name: "test",
-      title: "TEST",
-      content: "dnkwanjkdnajkdw",
-      photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7Hsc9TliEcBsGvylGUF8vABnC_As0w2vGw&usqp=CAU"
-    }
+export class CommentPrevviewComponent implements OnInit {
+  @Input() posts: any
 
-  ];
+  @Output() newItemEvent = new EventEmitter<any>();
+
+  constructor(private readonly dataService: DataService) {
+    this.posts = dataService.posts
+  }
+
+
+  ngOnInit(): void {
+
+  }
+
+  public test(post: any): void {
+
+
+    this.newItemEvent.emit(post)
+  }
+
 
 
 }

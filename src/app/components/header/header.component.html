@@ -20,7 +20,7 @@
       <section class="profile-menu">
         <div class="profile-img"></div>
         <div class="menu-auth">
-          <div class="login">
+          <div [routerLink]="'login'" (click)="closeMenu()" class="login">
             Login
           </div>
           <div class="register">
@@ -31,11 +31,11 @@
 
       <section class="menu-routes">
         <div>Create Comment</div>
-        <div>Display Comments</div>
+        <div [routerLink]="'show'" (click)="closeMenu()">Display Comments</div>
 
       </section>
 
-      <section class="copyright">
+      <section class=" copyright">
         Rafa Dev Copyright ©
       </section>
     </div>
